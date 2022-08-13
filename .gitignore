@@ -1,3 +1,13 @@
+# Build directories
+/Debug
+/Release
+
+# JSON compilation database
+compile_commands.json
+
+#cmake
+.cache
+
 # Prerequisites
 *.d
 
