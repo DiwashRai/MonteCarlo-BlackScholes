@@ -7,4 +7,3 @@ add_executable(
     monte_carlo_option_pricer.hpp
     monte_carlo_option_pricer.cpp
   )
-

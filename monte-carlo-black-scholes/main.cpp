@@ -1,4 +1,6 @@
 
+#include <string>
+#include <iostream>
 #include "CLI11.hpp"
 #include "monte_carlo_option_pricer.hpp"
 
@@ -27,6 +29,11 @@ int main(int argc, char** argv)
     app.add_flag("-p,--parallel", inParallel, "Parallelise the simulation")->group(simulation_grop);
 
     CLI11_PARSE(app, argc, argv);
+    std::cout << "Stock Price: " << stock_price << " | Strike Price: " << strike_price << '\n'
+              << "Risk Free Rate : " << risk_free_rate << " | Volatility: " << volatility << '\n'
+              << "Days: " << days_to_expire << '\n'
+              << "Steps: " << steps << " | Simulations: " << simulations
+              << std::endl;
 
     const double time_to_maturity = days_to_expire / 365.0;
 
@@ -34,4 +41,3 @@ int main(int argc, char** argv)
     double call_price = option_pricer.run();
     std::cout << "Call price: " << call_price << '\n';
 }
-

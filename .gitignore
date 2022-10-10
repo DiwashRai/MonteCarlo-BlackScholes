@@ -1,6 +1,7 @@
 # Build directories
 /Debug
 /Release
+/build
 
 # JSON compilation database
 compile_commands.json
@@ -40,3 +41,6 @@ compile_commands.json
 *.exe
 *.out
 *.app
+
+# IDE files
+/.idea
